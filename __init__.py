@@ -6,3 +6,4 @@
 XL_VERSION = "2.00 12"
 
 from .xolder import ABook
+from .xcommon import dprint, simple_ascii
