@@ -34,6 +34,7 @@ class ABook(BasicObj):
         book = xlrd.open_workbook(fname)
         self._workbook = book
         self.ibook = OldBook(book, self._aname)
+        self.ibook.first()
         return True
 
     def book(self):
