@@ -34,7 +34,8 @@ class ABook(BasicObj):
         book = xlrd.open_workbook(fname)
         self._workbook = book
         self.ibook = OldBook(book, self._aname)
-        self.ibook.first()
+        ibk = self.ibook.first()
+        assert ibk.biff_version > 0, self._aname
         return True
 
     def book(self):
